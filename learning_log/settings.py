@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = the_key
-'_5iuq)u&t+3bh+m1-=&_^!1m*e2$&x9b=#s57$111vw62g^t^$'
+SECRET_KEY = '_5iuq)u&t+3bh+m1-=&_^!1m*e2$&x9b=#s57$111vw62g^t^$'
 
 
 
