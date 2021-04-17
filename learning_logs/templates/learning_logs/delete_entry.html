@@ -1,0 +1,22 @@
+{% extends "learning_logs/base.html" %}
+{% load bootstrap4 %}
+
+{% block page_header %}
+<h2>Confirm delete entry:</h2>
+{% endblock page_header %}
+
+{% block content %}
+<form method="post" action="{% url 'learning_logs:delete_entry' entry.id %}" class="form">
+    {% csrf_token %}
+    {% buttons %}
+    <p>Are you sure you want to delete entry?</p>
+    <form method="POST">
+        <button class="btn btn-secondary" name="confirm" value="no">No</button>
+        <button class="btn btn-primary" name="confirm" value="yes">Delete entry</button>
+    </form>
+    {% endbuttons %}
+
+    <input type="hidden" name="next" value="{% url 'learning_logs:delete_entry' entry.id %}" />
+</form>
+
+{% endblock content %}
